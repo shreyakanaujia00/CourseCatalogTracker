@@ -27,17 +27,17 @@ Column E consists of the courses' requirement details that are aimed for student
 Column F and following non-empty columns consist of the courses' prerequisites courses. Each column contains a possible list of courses that a student must have already completed in order to attend the row's course. For example, Course CS348 prerequisites, according to the [UMass Amherst CICS course webpage](https://www.cics.umass.edu/academics/courses), includes CS210 and CS240 and (CS250 or M455). This data is represented in two columns because a student can attend the Course CS348 if they have completed the courses: CS210, CS240, and CS250, or have completed the courses: CS210, CS240, and M455.
 
 ### Course.java
-This is a class structure named Course, that's used to represent a course in the CICS course catalog. It includes attributes for each column of metadata in CICSCourseCatalog.xlsx. It also includes setters, getters, a print all attributes method: printDetails(), and an appending to the prereq attribute: addPreReqList(ArrayList<String> pr).
+This is a class structure named Course, that's used to represent a course in the CICS course catalog. It includes attributes for each column of metadata in CICSCourseCatalog.xlsx. It also includes setters, getters, a print all attributes method: printDetails(), and an appending to the prereq attribute: addPreReqList(ArrayList<String> pr).\
 For more details on the methods, see comments within the file. 
 
 ### userCourses.txt
-This is a simple text file that has all the courses the user (student) has completed. This data is represented in course IDs and each ID is seperated by a new line.
+This is a simple text file that has all the courses the user (student) has completed. This data is represented in course IDs and each ID is seperated by a new line.\
 This file is read in the method readUserCoursesFile() in mainActivity.java.
 
 ### mainActivity.java
 The main method automatically runs methods readUserCoursesFile() and readUserCoursesFile(), which collectively read all the data and store some of it through the class structure 'Course'. 
-Then it allows users to see a menu and choose what method to utilize. 
-At this moment, users can see course catalog metadata, and find what classes they are elligible to take based on the prerequisites. 
+Then it allows users to see a menu and choose what method to utilize. \
+At this moment, users can see course catalog metadata, and find what classes they are elligible to take based on the prerequisites. \
 For more details on the methods, see comments within the file. 
 
 *Note: more methods and features will likely be added in the soon future. 
