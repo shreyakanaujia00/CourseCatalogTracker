@@ -12,14 +12,18 @@ This data is manually collected from the [UMass Amherst CICS course webpage](htt
 
 Though the specific metadata can change, the format and set up of this sheet needs to stay consistent in order for method, readCourseCatalogExcel() in mainActivity.java, to read and store the data using Apache POI. 
 
-Table set up:
-Row 1 is reserved for headers and is skipped by readCourseCatalogExcel(). 
-Following rows represent a course that is offered from 
-Column A consists of course IDs. 
-Column B consists of course names. 
-Column C consists of the courses' number of credits. 
-Column D consists of the courses' frequency: whether they're offered during the fall, spring, or both semesters. 
-Column E consists of the courses' requirement details that are aimed for students who are getting their BS in Computer Science. This is aligned with the degree requirements that BS in CS Students need to complete the mandatory classes, the Integrative Expierence requirement, the Junior Year Writing requirement, the College of Natural Science Lab Science requirement, 3 CS300+ electives, and 3 CS400+ electives in order to graduate.
+**Table Set Up:**
+
+<ins>Rows</ins>\
+Row 1 is reserved for headers and is skipped by readCourseCatalogExcel().\
+Following rows represent a course that is offered from CICS.
+
+<ins>Columns</ins>\
+Column A consists of course IDs. \
+Column B consists of course names. \
+Column C consists of the courses' number of credits. \
+Column D consists of the courses' frequency: whether they're offered during the fall, spring, or both semesters. \
+Column E consists of the courses' requirement details that are aimed for students who are getting their BS in Computer Science. This is aligned with the degree requirements that BS in CS Students need to complete the mandatory classes, the Integrative Expierence requirement, the Junior Year Writing requirement, the College of Natural Science Lab Science requirement, 3 CS300+ electives, and 3 CS400+ electives in order to graduate.\
 Column F and following non-empty columns consist of the courses' prerequisites courses. Each column contains a possible list of courses that a student must have already completed in order to attend the row's course. For example, Course CS348 prerequisites, according to the [UMass Amherst CICS course webpage](https://www.cics.umass.edu/academics/courses), includes CS210 and CS240 and (CS250 or M455). This data is represented in two columns because a student can attend the Course CS348 if they have completed the courses: CS210, CS240, and CS250, or have completed the courses: CS210, CS240, and M455.
 
 ### Course.java
